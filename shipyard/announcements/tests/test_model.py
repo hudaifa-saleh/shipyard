@@ -9,3 +9,8 @@ class TestAnnouncements(TestCase):
         assert announcements.title
         assert announcements.description
         assert announcements.expired_at
+
+    def test_str(self):
+        announcements = AnnouncementFactory()
+
+        assert str(announcements) == announcements.title

@@ -1,3 +1,9 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Announcements
+
+
+@admin.register(Announcements)
+class AnnouncementsAdmin(admin.ModelAdmin):
+    list_display = ('title', 'expired_at', )
+    date_hierarchy = 'expired_at'
