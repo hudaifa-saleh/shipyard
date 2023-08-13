@@ -10,4 +10,4 @@ class AnnouncementFactory(factory.django.DjangoModelFactory):
 
     title = factory.Faker('sentence')
     description = factory.Faker('paragraph')
-    expired_at = factory.LazyFunction(lambda: timezone.now() + datetime.timedelta(days=14))
+    expires_at = factory.LazyFunction(lambda: timezone.now() + datetime.timedelta(days=14))
