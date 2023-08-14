@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block main %}
+    {% for category in servicecategory_list %}
+        <h1><a href="{% url 'service:service-category-detail' category.slug %}">{{ category.name }}</a></h1>
+    {% endfor %}
+{% endblock main %}
+

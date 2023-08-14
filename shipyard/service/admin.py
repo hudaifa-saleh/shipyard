@@ -1,3 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
+from shipyard.service.models import ServiceCategory, Service
+
+admin.site.register(ServiceCategory)
+admin.site.register(Service)
