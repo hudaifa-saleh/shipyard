@@ -1,4 +1,7 @@
 {% extends "base.html" %}
 {% block main %}
     <h1>{{ servicecategory.name }}</h1>
+    {% for service in services %}
+        <h2><a href="{% url 'service:service-detail' service.id %}">{{ service.name }}</a></h2>
+    {% endfor %}
 {% endblock main %}
