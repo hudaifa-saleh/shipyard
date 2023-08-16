@@ -37,7 +37,7 @@ class Service(models.Model):
     street_address = models.CharField(max_length=256, default="")
     city = models.CharField(max_length=128, default="")
     state = models.CharField(max_length=128, default="")
-    zip_code = models.CharField(max_length=128, default="")
+    address = models.CharField(max_length=128, default="")
     latitude = models.CharField(max_length=18, blank=True, default="")
     longitude = models.CharField(max_length=18, blank=True, default="")
 

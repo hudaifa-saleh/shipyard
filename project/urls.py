@@ -20,4 +20,6 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('shipyard.service.urls', namespace='service')),
+    path('announcements/', include('shipyard.announcements.urls', namespace='announcements')),
+
 ]
